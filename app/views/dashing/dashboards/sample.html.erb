@@ -2,14 +2,17 @@
   Trackathon Dashboard
 <% end %>
 
+<% @datetime = "26-Nov-2014 16:30:00" %>
+
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="4" data-sizey="1">
-      <div data-view="Countdown" data-title="Lunch Time In:" data-end="25-Nov-2014 12:15:00"></div>
+      <div data-view="Countdown" data-title="Party time" data-end="<%= @datetime %>"></div>
     </li>
     <li data-row="1" data-col="1" data-sizex="4" data-sizey="1">
-      <div data-id="welcome" data-view="Text" data-title="Trackathon" data-text="Track your Hackathon"</div>
+      <div data-id="welcome" data-view="Text" data-title="Trackathon" data-text="Track your Hackathon"></div>
     </li>
   </ul>
-  <center><div style="font-size: 12px">Try this: curl -X PUT 'http://<%= request.host %>:<%= request.port %>/dashing/widgets/welcome' -d "widget[text]=Dashing is awesome"</div></center>
+  <center><div style="font-size: 12px">Try this: curl -X PUT 'http://<%= request.host %>:<%= request.port %>/dashing/widgets/welcome' -d "widget[text]=Dashing is awesome"></div></center>
 </div>
+
